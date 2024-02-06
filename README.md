@@ -38,6 +38,8 @@ Intel 英特尔 NUC9 幽灵峡谷 Hackintosh 黑苹果配置和教程，根据�
     - https://www.tonymacx86.com/threads/apple-music-wont-stream-songs.319563/
 - ❌ 无法显示风扇传感器信息，不影响使用（如果有朋友解决了可以告诉我一下）
 
+更多信息可以参考手册 [NUC9QN_TechProdSpec.pdf](./docs/NUC9QN_TechProdSpec.pdf)
+
 ## 安装说明
 
 本次系统安装的当前最新版本 macOS Sonoma 14.3（2024年1月发布），最新的 OpenCore 0.9.7。安装步骤遵循官方指导文件，选择最小化最适合的配置，所有kexts 均从官方下载最新版，无多余内容。制作镜像和启动的教程很多，这里就不再赘述了，也可以看下面的参考链接。
