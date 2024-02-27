@@ -12,13 +12,18 @@ Intel 英特尔 NUC9 幽灵峡谷 Hackintosh 黑苹果配置和教程，根据�
 
 - macOS Sonoma 14.3 （OpenCore 0.9.7）
 
+更新说明：
+
+- 2024-02-27：
+    - 更新 USBMap，修复 USB 识别问题
+
 ## 配置信息和可用性
 
 - ✅ 型号：Intel NUC9V7QNX 幽灵峡谷
 - ✅ 主板：Intel CM246 芯片组
 - ✅ CPU：Intel i7-9850H
 - ✅ 显卡：Intel UHD Graphics 630 核显
-- ✅ 内存：联想 DDR4 16G 2667Mhz
+- ✅ 内存：联想 DDR4 16G 2667Mhz （旧拆机条）
 - ✅ 以太网卡：Intel Ethernet Connection i219-LM and i210-AT（主板自带）
 - ✅ 无线网卡：Intel Wi-Fi 6 AX200 (Gig+)
 - ✅ 存储：西数黑盘 WD_BLACK SN770 2TB https://u.jd.com/cbv5dkE
@@ -36,7 +41,6 @@ Intel 英特尔 NUC9 幽灵峡谷 Hackintosh 黑苹果配置和教程，根据�
 - ❌ Airdrop 不可用，需要另外购买网卡
 - ❌ 用蓝牙耳机播放 Apple Music 时，只能下载播放，无法使用流媒体播放，需要另外购买网卡（用有线耳机或其他音乐播放器不影响）
     - https://www.tonymacx86.com/threads/apple-music-wont-stream-songs.319563/
-- ❌ 无法显示风扇传感器信息，不影响使用（如果有朋友解决了可以告诉我一下）
 
 更多信息可以参考手册 [NUC9QN_TechProdSpec.pdf](./docs/NUC9QN_TechProdSpec.pdf)
 
@@ -86,6 +90,10 @@ AX200 网卡支持 Wi-Fi 160Mhz 的频段带宽，协商速率能达到 1732Mbps
 西数这块黑盘算是民用旗舰产品，标称速率能到5000M以上，可能是因为 NUC 本身 PCIE 接口问题，实测在 2000M 左右，当然也足够用了。如果要买 SSD 的话，其实买 PCIE 3.0 版本的其实也够用了。
 
 ![](./docs/WD-SN770.png)
+
+USB 接口一览，F表示前面的USB口，B表示后面的USB口，B1-1表示第1行左边，B1-2表示第1行右边，T2表示USB2协议，T3表示USB3协议，B3和B4是TypeC口。同一个物理接口可能支持多种协议，NUC前后8个USB口都能达到10Gbps的协商速率。
+
+![](./docs/USBMap.png)
 
 ## 捐赠支持
 
