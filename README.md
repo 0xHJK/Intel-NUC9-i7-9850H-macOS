@@ -14,6 +14,8 @@ Intel 英特尔 NUC9 幽灵峡谷 Hackintosh 黑苹果配置和教程，根据�
 
 更新说明：
 
+- 2024-05-29：
+    - 修复 I210 网卡死机重启问题
 - 2024-02-27：
     - 更新 USBMap，修复 USB 识别问题
 
@@ -61,6 +63,18 @@ sudo pmset standby 0
 sudo pmset proximitywake 0
 sudo pmset tcpkeepalive 0
 ```
+
+## 修复 I210-AT 网卡问题
+
+症状：网线插入 I210-AT 网卡所在的接口时会出现死机重启情况。
+
+原因：macOS 在升级之后移除了对 I210-AT 的支持，而 IntelMausi.kext 并不支持 I210 网卡
+
+解决办法：下载 AppleIntelI210Ethernet.kext，手动添加到 /EFI/OC/Kexts/，在 config.plist 启用，并添加启动参数 e1000=0
+
+![](./docs/I210.png)
+
+完成后在系统报告里会显示驱动为 AppleIntelI210Ethernet.kext
 
 ## 参考资料
 
